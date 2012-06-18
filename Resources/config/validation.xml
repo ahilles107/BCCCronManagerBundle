@@ -7,31 +7,31 @@
         <property name="minute">
             <constraint name="NotBlank"/>
             <constraint name="Regex">
-                <option name="pattern">/[0-9\*,\/]+/</option>
+                <option name="pattern">[0-9\*,\/]+</option>
             </constraint>
         </property>
         <property name="hour">
             <constraint name="NotBlank"/>
             <constraint name="Regex">
-                <option name="pattern">/[0-9\*,\/]+/</option>
+                <option name="pattern">[0-9\*,\/]+</option>
             </constraint>
         </property>
         <property name="dayOfMonth">
             <constraint name="NotBlank"/>
             <constraint name="Regex">
-                <option name="pattern">/[0-9\*,\/?LW]+/</option>
+                <option name="pattern">[0-9\*,\/?LW]+</option>
             </constraint>
         </property>
         <property name="month">
             <constraint name="NotBlank"/>
             <constraint name="Regex">
-                <option name="pattern">/[A-Z0-9\*,\/]+/</option>
+                <option name="pattern">[A-Z0-9\*,\/]+</option>
             </constraint>
         </property>
         <property name="dayOfWeek">
             <constraint name="NotBlank"/>
             <constraint name="Regex">
-                <option name="pattern">/[A-Z0-6\*,\/?L#]+/</option>
+                <option name="pattern">[A-Z0-6\*,\/?L#]+</option>
             </constraint>
         </property>
         <property name="command">
@@ -39,13 +39,13 @@
         </property>
         <property name="logFile">
             <constraint name="Regex">
-                <option name="pattern">/\s+/</option>
+                <option name="pattern">\s+</option>
                 <option name="match">0</option>
             </constraint>
         </property>
         <property name="errorFile">
             <constraint name="Regex">
-                <option name="pattern">/\s+/</option>
+                <option name="pattern">\s+</option>
                 <option name="match">0</option>
             </constraint>
         </property>
