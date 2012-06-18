@@ -2,7 +2,7 @@
 
 namespace BCC\CronManagerBundle\Form\Type;
 
-use \Symfony\Component\Form\FormBuilder;
+use \Symfony\Component\Form\FormBuilderInterface;
 use \Symfony\Component\Form\AbstractType;
 
 class CronType extends AbstractType
@@ -19,7 +19,7 @@ class CronType extends AbstractType
      * @param \Symfony\Component\Form\FormBuilder $builder The form builder
      * @param array         $options The options
      */
-    public function buildForm(FormBuilder $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('minute');
         $builder->add('hour');
