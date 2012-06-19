@@ -21,7 +21,7 @@ class TwigExtension extends \Twig_Extension
 
     public function __construct($logDir, $kernelDir)
     {
-        if(function_exist('posix_getpwuid')) {
+        if(\function_exist('posix_getpwuid')) {
             $this->wwwUser = \posix_getpwuid(\posix_geteuid());
         } else {
             $this->wwwUser = \getenv("username");
