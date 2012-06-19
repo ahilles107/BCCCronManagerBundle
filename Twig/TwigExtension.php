@@ -21,7 +21,11 @@ class TwigExtension extends \Twig_Extension
 
     public function __construct($logDir, $kernelDir)
     {
-        $this->wwwUser = \posix_getpwuid(\posix_geteuid());
+        if(function_exist('posix_getpwuid')) {
+            $this->wwwUser = \posix_getpwuid(\posix_geteuid());
+        } else {
+            $this->wwwUser = \getenv("username");
+        }
         $this->logDir = $logDir;
         $this->symfonyCommand = 'php '.$kernelDir.'/console';
     }
